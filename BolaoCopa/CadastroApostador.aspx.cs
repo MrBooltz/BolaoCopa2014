@@ -11,7 +11,7 @@ namespace BolaoCopa
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // seta o foco no campo de nome
+            // posiciona o cursor no campo de nome 
             txtNome.Focus();
         }
     }

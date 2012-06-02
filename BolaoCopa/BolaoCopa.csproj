@@ -63,7 +63,6 @@
     <Content Include="Imagens\logoBolaoMenu.png" />
     <Content Include="Imagens\logoCopaEntrada.png" />
     <Content Include="Ranking.aspx" />
-    <Content Include="Scripts\CadastroApostador.js" />
     <Content Include="Styles\estilo.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -144,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.master" />
