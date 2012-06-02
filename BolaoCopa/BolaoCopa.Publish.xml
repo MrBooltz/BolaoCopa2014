@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\temp" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="BolaoCopa" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="05/21/2012 21:25:27" />
+    <file relUrl="Imagens/contadorDias.png" publishTime="05/18/2012 13:40:52" />
+    <file relUrl="Imagens/bgBarraMenu.png" publishTime="03/28/2012 10:18:50" />
+    <file relUrl="ErroLogin.aspx" publishTime="05/16/2012 00:46:21" />
+    <file relUrl="CadastroResultado.aspx" publishTime="05/21/2012 20:37:50" />
+    <file relUrl="Imagens/logoBolaoMenu.png" publishTime="04/04/2012 23:23:12" />
+    <file relUrl="CadastroApostador.aspx" publishTime="05/20/2012 17:21:35" />
+    <file relUrl="Imagens/boxLogin.png" publishTime="03/28/2012 10:25:26" />
+    <file relUrl="Logout.aspx" publishTime="05/13/2012 16:00:07" />
+    <file relUrl="Aposta.aspx" publishTime="05/21/2012 20:36:58" />
+    <file relUrl="Imagens/inputLogin.png" publishTime="04/05/2012 13:00:20" />
+    <file relUrl="Principal.aspx" publishTime="05/21/2012 19:47:10" />
+    <file relUrl="Styles/estilo.css" publishTime="05/20/2012 19:01:43" />
+    <file relUrl="MasterPage2.Master" publishTime="05/16/2012 23:03:42" />
+    <file relUrl="MasterPage.master" publishTime="05/20/2012 19:01:21" />
+    <file relUrl="Imagens/background.png" publishTime="04/02/2012 21:01:36" />
+    <file relUrl="Extrato.aspx" publishTime="05/20/2012 18:04:12" />
+    <file relUrl="Imagens/logoBolao.png" publishTime="04/03/2012 13:58:34" />
+    <file relUrl="bin/BolaoCopa.dll" publishTime="05/21/2012 21:27:58" />
+    <file relUrl="Imagens/logoCopaEntrada.png" publishTime="04/04/2012 19:05:40" />
+    <file relUrl="Ranking.aspx" publishTime="05/20/2012 17:52:05" />
+    <file relUrl="Scripts/CadastroApostador.js" publishTime="04/21/2012 20:20:02" />
+    <file relUrl="Default.aspx" publishTime="05/20/2012 18:31:43" />
+    <file relUrl="bin/BolaoCopa.pdb" publishTime="05/21/2012 21:27:58" />
+    <file relUrl="Imagens/inputSenha.png" publishTime="04/05/2012 13:00:58" />
+  </publishProfile>
+</publishData>

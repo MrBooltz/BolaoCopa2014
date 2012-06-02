@@ -10,15 +10,51 @@
 namespace BolaoCopa {
     
     
-    public partial class WebForm3 {
+    public partial class Principal {
         
         /// <summary>
-        /// imCopaMundo control.
+        /// imContador control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imCopaMundo;
+        protected global::System.Web.UI.WebControls.Image imContador;
+        
+        /// <summary>
+        /// lbTextoContador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbTextoContador;
+        
+        /// <summary>
+        /// lbBemVindo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbBemVindo;
+        
+        /// <summary>
+        /// lbHistoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbHistoria;
+        
+        /// <summary>
+        /// imLogo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imLogo;
     }
 }

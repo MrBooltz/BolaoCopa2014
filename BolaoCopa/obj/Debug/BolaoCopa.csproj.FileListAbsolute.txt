@@ -13,3 +13,8 @@ G:\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
 G:\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
 G:\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
 G:\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb

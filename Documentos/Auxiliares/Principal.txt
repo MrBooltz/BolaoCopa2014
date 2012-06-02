@@ -1,0 +1,47 @@
+contador 
+top: 91px;
+font-family: Verdana, Geneva, sans-serif;
+font-size: 30px;
+color: white;
+
+Seja bem-vindo fulano !
+
+Um pouco de história ...
+
+A Copa do Mundo da FIFA é um dos maiores eventos esportivos do planeta. A disputa quadrienal entre as melhores 
+seleções do mundo mobiliza bilhões de pessoas de todos os quadrantes, de todas as culturas. Inflama paixões e, 
+ao mesmo tempo, reduz diferenças, já que os povos dos mais distintos países, durante os 90 minutos de uma partida, 
+criam um laço comum ao compartilhar a mesma emoção, ao mesmo tempo. É um acontecimento raro, sem similar, e por 
+isso digno de reconhecimento universal.
+
+Em 2014, o Brasil será novamente a sede do torneio. A vigésima Copa do Mundo da FIFA ocorrerá 64 anos depois da 
+edição em que a seleção nacional se sagrou vice-campeã mundial em pleno Maracanã. Ainda faltam quase três anos, 
+mas desde que houve a definição do país sede, em 20 de outubro de 2007, iniciou-se um abrangente esforço nacional. 
+Não se trata simplesmente de cumprir as exigências da organização e fazer um bom papel aos olhos do mundo. Desde 
+maio de 2007, quando houve a ratificação das 12 cidades-sede, um trabalho de planejamento e execução de empreendimentos 
+estratégicos desencadeou um processo de desenvolvimento que transcende qualquer parâmetro esportivo.
+
+/*
+Hoje, o que ganha mais visibilidade na mídia é a situação dos estádios em que ocorrerão os jogos, que estão sendo 
+modernizados ou reconstruídos. Porém, paralelamente, muito mais está sendo feito. O objetivo do Governo Federal é 
+coordenar um programa de investimento que transformará algumas das capitais mais importantes do país, de norte a 
+sul e de todas as regiões: Belo Horizonte, Brasília, Cuiabá, Curitiba, Fortaleza, Manaus, Natal, Porto Alegre, 
+Recife, Rio de Janeiro, Salvador e São Paulo. Para todos os brasileiros, qualquer que seja o resultado da Copa, 
+ficará um relevante legado em infraestrutura, criação de emprego e renda e promoção da imagem do país em escala global.
+
+Estima-se que a Copa do Mundo da FIFA 2014 agregará 183 bilhões de reais ao PIB do país e mobilizará 33 bilhões de 
+reais em investimento em infraestrutura, com destaque para a área de transporte e sistemas viários. Aproximadamente 3
+,7 milhões de turistas, brasileiros e estrangeiros, deverão gerar, no período do evento, R$ 9,4 bilhões. Em todas 
+as áreas, 700 mil empregos permanentes e temporários serão criados. Hoje, o Governo Federal se concentra em dois 
+pilares, o primeiro dos quais é a concretização das garantias oficiais assumidas na proposta de Lei Geral da Copa 
+(prestes a ser enviada ao Congresso). O segundo é a Matriz de Responsabilidades, acordo que envolve a União, os 
+estados, os municípios e o Distrito Federal e define compromissos referentes a fontes de recursos e execução 
+dos projetos essenciais para a realização do evento.
+*/
+
+No cronograma da Copa, a primeira data importante foi 30 de julho, quando houve o sorteio dos grupos das 
+eliminatórias, sob os olhos do mundo. Desde então, os projetos seguiram em ritmo acelerado para o cumprimento 
+dos cronogramas e a certeza de que, em junho de 2014, haverá um palco impecável para o grande acontecimento: o 
+Brasil, que certamente será um país ainda melhor, em todos os sentidos.
+
+

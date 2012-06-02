@@ -11,8 +11,16 @@ namespace BolaoCopa
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // exibe o nome do usuário logado
-            lbUsuarioLogado.Text = Request.Form.Get("txtUsuario");
+            // o usuário não está logado no sistema. Redirecionar para a página de erro de login
+            if (Session["usuarioLogado"] == null)
+            {
+                Response.Redirect("~/ErroLogin.aspx");
+            }
+            else
+            {
+                // exibe o nome do usuário logado
+                lbUsuarioLogado.Text = Session["usuarioLogado"].ToString();
+            }
         }
     }
 }

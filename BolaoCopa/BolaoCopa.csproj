@@ -14,6 +14,7 @@
     <AssemblyName>BolaoCopa</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,19 +37,18 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Aposta.aspx" />
@@ -57,14 +57,18 @@
     <Content Include="Imagens\background.png" />
     <Content Include="Imagens\bgBarraMenu.png" />
     <Content Include="Imagens\boxLogin.png" />
+    <Content Include="Imagens\contadorDias.png" />
     <Content Include="Imagens\inputLogin.png" />
     <Content Include="Imagens\inputSenha.png" />
     <Content Include="Imagens\logoBolao.png" />
     <Content Include="Imagens\logoBolaoMenu.png" />
     <Content Include="Imagens\logoCopaEntrada.png" />
     <Content Include="Ranking.aspx" />
+    <Content Include="Scripts\CadastroApostador.js" />
     <Content Include="Styles\estilo.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -74,6 +78,8 @@
     <Content Include="Default.aspx" />
     <Content Include="CadastroApostador.aspx" />
     <Content Include="Principal.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="ErroLogin.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aposta.aspx.cs">
@@ -90,6 +96,8 @@
     <Compile Include="CadastroResultado.aspx.designer.cs">
       <DependentUpon>CadastroResultado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ConexaoBD.cs" />
+    <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Extrato.aspx.cs">
       <DependentUpon>Extrato.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,10 +148,23 @@
     <Compile Include="Ranking.aspx.designer.cs">
       <DependentUpon>Ranking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErroLogin.aspx.cs">
+      <DependentUpon>ErroLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErroLogin.aspx.designer.cs">
+      <DependentUpon>ErroLogin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.master" />
@@ -159,10 +180,9 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1250</DevelopmentServerPort>
+          <DevelopmentServerPort>1051</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/BolaoCopa</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
