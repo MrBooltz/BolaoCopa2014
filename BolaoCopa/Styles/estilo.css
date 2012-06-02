@@ -2,6 +2,17 @@
 {
     background-image:url('../imagens/background.png');
     background-repeat:repeat-x;
+    background-color: rgb(231, 236, 237);
+    font-family: 'Trebuchet MS', arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+html, body, #holder 
+{ 
+	min-height: 100%; 
+	width: 100%; 
+	height: 100%;
+	font-weight: 700;
 }
 
 p
@@ -41,6 +52,12 @@ p
     height:100%
 }
 
+#imgMenu
+{
+	height: 51px;
+	width: 1016px;	
+}
+
 .label, .combo
 {
     font-family: Segoe UI;
@@ -62,8 +79,6 @@ p
     border-width:1px;
     color: Gray;
 }  
-
-
 
 .inputLogin, .inputSenha
 {
@@ -161,7 +176,7 @@ p
     left:50%;
     width:612px;
     height:41px;
-    margin-left:-305px;
+    margin-left:-507px;
 }    
 
 #centro
@@ -173,9 +188,9 @@ p
     border-width:1px;    
     top:10px;
     left:50%;
-    width:600px;
-    height:650px;
-    margin-left:-300px;
+    width:1000px;
+    height:900px;
+    margin-left:-500px;
 }
 
 #logoBolao
@@ -310,3 +325,213 @@ p
 {
     float:right;
 }     
+
+
+ h1,h2,h3 {
+ color:#8fa819;font-family: "Trebuchet MS",arial, helvetica, sans-serif;font-weight:bold;font-size:15px;padding-left:12px;
+ background: url(images/arrow.gif) no-repeat left center;
+ text-transform: uppercase;
+ }
+ 
+
+a {
+color:#3f71b6;
+}
+
+
+.tabela_resultados
+{
+	position: relative;
+	margin: 25px;	
+}
+
+td
+{
+	padding: 5px;	
+}
+
+
+.mandante
+{
+  text-align: right;
+  width: 70px;
+}
+
+.tabela_resultados2
+{
+ position: relative;
+ margin: 25px;
+ 	
+}
+
+.tabela_resultados3
+{
+ position: relative;
+ margin: 25px;
+ 	
+}
+
+.tabela_resultados4
+{
+ position: relative;
+ margin: 25px;
+ 	
+}
+
+.ladoA
+{
+text-align: left;
+width: 53%;
+position: absolute;
+margin-left: 0px;
+border-style: solid;
+border: 1px;
+border-color: Black;
+}
+
+.ladoB
+{
+text-align: left;
+width: 49%;
+position: relative;
+float: right;
+margin-right: 0px;
+}
+
+.corpo
+{
+width: 98%;
+margin-left: auto;
+margin-right: auto;
+position: absolute;
+	
+}
+
+.buttons
+{
+ position: relative;
+ bottom:0;
+ 	
+}
+
+
+.comandos
+{
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.resultados
+{
+	margin-left: 15px;
+}
+
+.ranking, .extrato
+{
+	margin-left: 45px;	
+}
+
+.thead_ranking
+{
+   
+   background-color: rgb(240, 240, 240);
+}
+
+.tbranking_nome
+{
+	text-align:left;
+}
+
+.tabela_ranking, .tabela_extrato
+{
+	text-align: center;
+}
+
+.trPar
+{
+	/*background-color: rgb(232, 240, 232);*/
+	border-bottom: outset;
+	border-width: thin;
+	
+}
+
+.trImpar
+{
+	background-color: rgb(237, 252, 211);
+	border-bottom: outset;
+	border-width: thin;
+}
+
+.tabela_ranking td
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.tabela_extrato td
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.extrato_A
+{
+	margin: 25px;
+	position: absolute;
+}
+
+.extrato_B
+{
+	margin-right: 0px;
+	margin-top: 25px;
+	position: relative;
+}
+
+.extrato_Aposta, .extrato_Resultado
+{
+	color: Red;
+}
+
+.validador
+{
+    font-family: Segoe UI;
+    font-size: x-small;
+    color: red;
+     
+}         
+
+.labelCadastro
+{
+    font-family: Segoe UI;
+    font-size: small;
+    color: gray;
+    padding-top:5px;
+    padding-bottom:8px;
+    height:18px;
+}    
+
+.camposCadastro
+{
+    background-color:white;
+    border-style:solid;
+    border-width:1px;
+    color: Gray;
+    margin-top:2px;
+    margin-bottom:3px;
+}  
+
+ .combosCadastro
+{
+    background-color:white;
+    border-style:solid;
+    border-width:1px;
+    color: Gray;
+    margin-top:2px;
+    margin-bottom:3px;
+}  

@@ -3,3 +3,18 @@ D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
 D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
 D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
 D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb
+C:\Users\Joao Paulo\Downloads\BolaoCopa(1)\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll
+C:\Users\Joao Paulo\Downloads\BolaoCopa(1)\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
+C:\Users\Joao Paulo\Downloads\BolaoCopa(1)\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Joao Paulo\Downloads\BolaoCopa(1)\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
+C:\Users\Joao Paulo\Downloads\BolaoCopa(1)\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb
+G:\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll
+G:\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
+G:\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
+G:\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
+G:\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
+D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb

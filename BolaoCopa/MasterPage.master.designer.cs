@@ -31,22 +31,40 @@ namespace BolaoCopa {
         protected global::System.Web.UI.HtmlControls.HtmlForm frmMaster;
         
         /// <summary>
-        /// ctnLogoBolao control.
+        /// hplHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ctnLogoBolao;
+        protected global::System.Web.UI.WebControls.HyperLink hplHome;
         
         /// <summary>
-        /// ctnLogout control.
+        /// imUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ctnLogout;
+        protected global::System.Web.UI.WebControls.Image imUsuario;
+        
+        /// <summary>
+        /// lbUsuarioLogado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbUsuarioLogado;
+        
+        /// <summary>
+        /// hplLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplLogout;
         
         /// <summary>
         /// ctnConteudo control.
@@ -67,12 +85,48 @@ namespace BolaoCopa {
         protected global::System.Web.UI.WebControls.Image imgMenu;
         
         /// <summary>
-        /// ctnBarraMenu control.
+        /// hplPrincipal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ctnBarraMenu;
+        protected global::System.Web.UI.WebControls.HyperLink hplPrincipal;
+        
+        /// <summary>
+        /// hplApostar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplApostar;
+        
+        /// <summary>
+        /// hplCadastros control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplCadastros;
+        
+        /// <summary>
+        /// hplRanking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplRanking;
+        
+        /// <summary>
+        /// hplExtrato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplExtrato;
     }
 }

@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage2.master.cs" Inherits="BolaoCopa.MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="Stylesheet" href="Styles/estilo.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="centro">
+            <!-- div da logomarca do bolão -->
+            <div id="logoBolao">
+                <asp:ContentPlaceHolder ID="ctnLogoBolao" runat="server">  </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim da div da logomarca do bolão -->
+
+            <!-- div das informações de logout do usuário -->
+            <div id="logout">
+                <asp:ContentPlaceHolder ID="ctnLogout" runat="server">  </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim da div das informações de logout do usuário -->
+
+            <!-- div do conteúdo do container -->
+            <div id="conteudo">
+                <asp:ContentPlaceHolder ID="ctnConteudo" runat="server">   </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim do conteúdo do container -->
+            
+        </div>
+        <!-- fim da div centralizada do form -->
+
+        <!-- div da barra de menu -->
+        <div id="menu">
+            <asp:Image ID="imgMenu" runat="server" 
+                ImageUrl="~/Imagens/bgBarraMenu.png" />
+
+            <!-- div do container das opções de menu -->
+            
+            <!-- fim da div do container das opções de menu -->
+
+        </div>
+    </form>
+</body>
+</html>

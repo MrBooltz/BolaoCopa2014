@@ -11,8 +11,6 @@ namespace BolaoCopa
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // exibe o nome do usuário logado
-            lbUsuarioLogado.Text = Request.Form.Get("txtUsuario");
         }
     }
 }

@@ -15,13 +15,28 @@
         <div id="centro">
             <!-- div da logomarca do bolão -->
             <div id="logoBolao">
-                <asp:ContentPlaceHolder ID="ctnLogoBolao" runat="server">  </asp:ContentPlaceHolder>
+               <asp:HyperLink ID="hplHome" runat="server" 
+        ImageUrl="~/Imagens/logoBolaoMenu.png" NavigateUrl="~/Principal.aspx">HyperLink</asp:HyperLink>
             </div>
             <!-- fim da div da logomarca do bolão -->
 
             <!-- div das informações de logout do usuário -->
             <div id="logout">
-                <asp:ContentPlaceHolder ID="ctnLogout" runat="server">  </asp:ContentPlaceHolder>
+                   
+
+
+    <div id="imgUsuario">
+        <asp:Image ID="imUsuario" runat="server" Height="24px" 
+            ImageUrl="~/Imagens/inputLogin.png" Width="22px" />
+    </div>
+
+    <div id="usuarioLogado">
+        <asp:Label ID="lbUsuarioLogado" runat="server" CssClass="labelPequeno" 
+            Text="usuario@dominio.com.br"></asp:Label>
+        &nbsp; | &nbsp;
+        <asp:HyperLink ID="hplLogout" runat="server" CssClass="hyperlinkPequeno" 
+            NavigateUrl="~/Default.aspx">Logout</asp:HyperLink>
+    </div>
             </div>
             <!-- fim da div das informações de logout do usuário -->
 
@@ -36,12 +51,23 @@
 
         <!-- div da barra de menu -->
         <div id="menu">
-            <asp:Image ID="imgMenu" runat="server" Height="51px" 
-                ImageUrl="~/Imagens/bgBarraMenu.png" Width="612px" />
+            <asp:Image ID="imgMenu" runat="server" 
+                ImageUrl="~/Imagens/bgBarraMenu.png" />
 
             <!-- div do container das opções de menu -->
             <div id="opcoesMenu">
-                <asp:ContentPlaceHolder ID="ctnBarraMenu" runat="server">  </asp:ContentPlaceHolder>
+                    <asp:HyperLink ID="hplPrincipal" runat="server" CssClass="itemMenu" 
+        Font-Bold="True" NavigateUrl="~/Principal.aspx">Principal</asp:HyperLink>
+    &nbsp;&nbsp;&nbsp; <asp:HyperLink ID="hplApostar" runat="server" 
+        CssClass="itemMenu" Font-Bold="True" NavigateUrl="~/Aposta.aspx">Apostar</asp:HyperLink>
+    &nbsp;&nbsp;&nbsp;&nbsp; <asp:HyperLink ID="hplCadastros" runat="server" 
+        CssClass="itemMenu" Font-Bold="True" NavigateUrl="~/CadastroResultado.aspx">Cadastros</asp:HyperLink>
+    &nbsp;&nbsp;&nbsp;&nbsp; <asp:HyperLink ID="hplRanking" runat="server" 
+        CssClass="itemMenu" Font-Bold="True" NavigateUrl="~/Ranking.aspx">Ranking</asp:HyperLink>
+    &nbsp;&nbsp;&nbsp;&nbsp; <asp:HyperLink ID="hplExtrato" runat="server" 
+        CssClass="itemMenu" Font-Bold="True" NavigateUrl="~/Extrato.aspx">Extratos</asp:HyperLink>
+    <br />
+    <br />
             </div>
             <!-- fim da div do container das opções de menu -->
 
