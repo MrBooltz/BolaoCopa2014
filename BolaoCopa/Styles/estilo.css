@@ -1,0 +1,312 @@
+﻿body 
+{
+    background-image:url('../imagens/background.png');
+    background-repeat:repeat-x;
+}
+
+p
+{
+    font-family:Segoe UI;
+    font-size:x-large;
+    color:Gray;
+    }
+
+#boxLogin
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:522px;
+    height:252px;
+    margin-left:-224px;
+    margin-top:-114px;
+}
+
+#camposLogin
+{
+    position:relative;
+    margin-left:10px;
+    margin-top:10px;
+    width:292px;
+    height:239px;
+    top: -263px;
+    left: 51px;
+}    
+
+.background 
+{
+    margin: 0;
+    padding:0;
+    width:100%;
+    height:100%
+}
+
+.label, .combo
+{
+    font-family: Segoe UI;
+    font-size: small;
+    color: gray;
+}    
+
+.labelPequeno
+{
+    font-family:Segoe UI;
+    font-size:x-small;
+    color:Gray;
+}    
+
+.inputText
+{
+    background-color:white;
+    border-style:solid;
+    border-width:1px;
+    color: Gray;
+}  
+
+
+
+.inputLogin, .inputSenha
+{
+    border-style:none;
+    background-color:White;
+    font-family:Segoe UI;
+    font-size:small;
+}
+
+.button
+{
+    border-style:solid;
+    border-width:1px;
+    width: 97px;
+    background-color:rgb(145,172,38);
+    color:White;
+    height: 30px;
+}    
+
+#btnEntrar
+{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 97px;
+    background-color:rgb(145,172,38);
+    color:White;
+    height: 30px;
+}   
+
+.hyperlink, .hyperlinkPequeno
+{
+    font-family:Segoe UI;
+    font-size:small;
+}
+
+.hyperlink:link{
+  color: gray;
+  text-decoration: none;
+}
+
+.hyperlink:visited
+{
+    color:Red;
+}
+
+.hyperlink:hover{
+  text-decoration: underline;
+}
+
+.hyperlinkPequeno
+{
+    font-family:Segoe UI;
+    font-size:x-small;
+}
+
+.hyperlinkPequeno:link{
+  color: gray;
+  text-decoration: none;
+}
+
+.hyperlinkPequeno:hover{
+  text-decoration: underline;
+}
+
+.logoBolaoLogin
+{
+    left: 50px;
+    margin-left: 110px;
+    margin-top: 30px;
+    padding:10px 10px 10px 10px;
+    background-color:White;
+    border-width:1px;
+    border-color:Gray;
+    border-style:solid;
+}       
+
+#logoCopaEntrada
+{
+    
+    border: 1px solid Gray;
+    position:absolute;
+    left:366px;
+    top:8px;
+    padding:15px 6px 15px 6px;
+    background-color:White;
+    height: 201px;
+    width: 128px;
+}    
+    
+#menu
+{
+    position:absolute;
+    top:70px;
+    left:50%;
+    width:612px;
+    height:41px;
+    margin-left:-305px;
+}    
+
+#centro
+{
+    position:absolute;
+    background-color:White;
+    border-style:solid;
+    border-color:Gray;
+    border-width:1px;    
+    top:10px;
+    left:50%;
+    width:600px;
+    height:650px;
+    margin-left:-300px;
+}
+
+#logoBolao
+{
+    position:absolute;
+    padding-left:5px;
+    padding-top:5px;
+    margin-left:8px;
+    margin-top:6px;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 247px;
+}
+
+#conteudo
+{
+    position:absolute;
+    top:105px;
+    left:0;
+    width:100%;
+    height: 535px;
+}    
+
+#logout
+{
+    float:right;
+    height:50px;
+    width:300px;
+}
+
+#opcoesMenu
+{
+    position:absolute;
+    top:10px;
+    left:7px;
+    width:600px;
+    height:36px;
+}    
+    
+#inputUsuario
+{
+    position:absolute;
+    
+    left:5px;
+    top:7px;
+    width:280px;
+    height:58px;
+}       
+
+
+#imgInputUsuario
+{
+    border-right-color:White;
+    left:2px;
+}
+
+#inputSenha
+{
+    
+    position:absolute;
+
+    left:5px;
+    top:80px;
+    width:280px;
+    height:58px;  
+}    
+
+#botaoEntrar
+{
+    position:absolute;
+    top:153px;
+    left:182px;
+    width: 101px;
+    height: 33px;
+}                
+
+#cliqueAqui
+{
+    position:absolute;
+    top:212px;
+    left:7px;
+    width:280px;
+    height:22px;
+}    
+
+#imgUsuario
+{
+    position:relative;
+    top:0px;
+    left:75px;
+    width:23px;
+}
+
+#usuarioLogado
+{
+    position:relative;
+    top:-25px;
+    left:110px;
+    width: 183px;
+}        
+    
+.itemMenu
+{
+    padding:5px 5px 5px 5px;
+    color:White;
+    font-family:Segoe UI;
+    font-size:small;
+    
+}
+
+.itemMenu:link{
+  color: white;
+  text-decoration: none;
+}
+
+.itemMenu:hover{
+  text-decoration: underline;
+  color:Yellow;
+}
+
+#imgCopa2014Principal
+{
+    float:left;
+    top:5px;
+    left:5px;
+    height:169px;
+    width:120px;
+}  
+
+#textoPrincipal
+{
+    float:right;
+}     

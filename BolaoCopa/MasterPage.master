@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BolaoCopa.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Bolão da Copa</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="Stylesheet" href="Styles/estilo.css" />
+</head>
+<body>
+    <form id="frmMaster" runat="server">
+        <!-- div centralizada do form -->    
+        <div id="centro">
+            <!-- div da logomarca do bolão -->
+            <div id="logoBolao">
+                <asp:ContentPlaceHolder ID="ctnLogoBolao" runat="server">  </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim da div da logomarca do bolão -->
+
+            <!-- div das informações de logout do usuário -->
+            <div id="logout">
+                <asp:ContentPlaceHolder ID="ctnLogout" runat="server">  </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim da div das informações de logout do usuário -->
+
+            <!-- div do conteúdo do container -->
+            <div id="conteudo">
+                <asp:ContentPlaceHolder ID="ctnConteudo" runat="server">   </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim do conteúdo do container -->
+            
+        </div>
+        <!-- fim da div centralizada do form -->
+
+        <!-- div da barra de menu -->
+        <div id="menu">
+            <asp:Image ID="imgMenu" runat="server" Height="51px" 
+                ImageUrl="~/Imagens/bgBarraMenu.png" Width="612px" />
+
+            <!-- div do container das opções de menu -->
+            <div id="opcoesMenu">
+                <asp:ContentPlaceHolder ID="ctnBarraMenu" runat="server">  </asp:ContentPlaceHolder>
+            </div>
+            <!-- fim da div do container das opções de menu -->
+
+        </div>
+        <!-- fim da div da barra de menu -->
+    </form>
+</body>
+</html>

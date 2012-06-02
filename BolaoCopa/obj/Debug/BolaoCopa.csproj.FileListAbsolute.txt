@@ -1,0 +1,5 @@
+D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll
+D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\bin\BolaoCopa.pdb
+D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.dll
+D:\Projetos\Dot NET\Bolao Copa\BolaoCopa\BolaoCopa\obj\Debug\BolaoCopa.pdb
