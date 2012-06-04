@@ -11,142 +11,90 @@ namespace BolaoCopa
 {
     public partial class Aposta : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void cbRodada_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
-
-        }
-
-        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            // limpa o label de mensagem de erro
             lblMsgErro.Visible = false;
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+
+        protected void cbRodada_TextChanged(object sender, EventArgs e)
         {
+            // limpa o label de mensagem de erro
             lblMsgErro.Visible = false;
         }
 
-        protected void DropDownList1_TextChanged(object sender, EventArgs e)
+        protected void cbGrupo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        protected void Button1_Click(object sender, GridViewCommandEventArgs e)
-        {
-
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-
-            // recupera o codigo do apostador e rodada
-            int codigo_apostador = Int32.Parse(Session["codApostador"].ToString());
-            int codigo_rodada = Int32.Parse(DropDownList1.SelectedValue);
+            // limpa o label de mensagem de erro
             lblMsgErro.Visible = false;
-            bool verificaErro = false;
+        }
+
+        protected void grdApostas_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            // limpa o label de mensagem
+            lblMsgErro.Visible = false;
+
+            // obtém o código da rodada a que se refere o jogo selecionado
+            Int32 iRodada = Int32.Parse(cbRodada.SelectedValue);
+            
+            // obtém o código do apostador diretamente das variáveis de sessão
+            Int32 iApostador = Int32.Parse(Session["codApostador"].ToString());
+
             try
             {
-                // recupera codigo, placar1 e placar 2
-                string[] arguments = ((string)e.CommandArgument).Split('|');
-                int codigoJogo = Convert.ToInt32(arguments[0]);
-                if (!verificaAposta(codigoJogo, codigo_apostador))
+                // obtém o vetor de parâmetros da partida
+                string[] parametros = ((string)e.CommandArgument).Split('|');
+
+                // obtém o código da partida no banco
+                int iJogo = Convert.ToInt32(parametros[0]);
+
+                // obtém a linha do gridview
+                GridViewRow row = grdApostas.Rows[Convert.ToInt32(parametros[1]) - 1];
+
+                // o resultado das duas partidas foi informado com sucesso. Proceder com a gravação das informações
+                if (((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text != "" && ((TextBox)row.Cells[2].FindControl("txtPlacar2")).Text != "")
                 {
-                    int linha = Convert.ToInt32(arguments[1]);
-                    GridViewRow row = GridView1.Rows[linha - 1];
+                    // obtém a quantidade de gols das duas equipes
+                    Int32 golsA = Int32.Parse(((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text);
+                    Int32 golsB = Int32.Parse(((TextBox)row.Cells[4].FindControl("txtPlacar2")).Text);
 
+                    // instancia a classe de aposta para persistência das informações no banco
+                    Apostas aposta = new Apostas();
 
-                    if (((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text != "" && ((TextBox)row.Cells[2].FindControl("txtPlacar2")).Text != "")
+                    // seta os parâmetros necessários da classe
+                    aposta.setApostador(iApostador);
+                    aposta.setGols_A(golsA);
+                    aposta.setGols_B(golsB);
+                    aposta.setJogo(iJogo);
+
+                    // persiste as informações no banco
+                    if (aposta.Salvar() == 0)
                     {
-                        int txtPlacar1 = Int32.Parse(((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text);
-                        int txtPlacar2 = Int32.Parse(((TextBox)row.Cells[4].FindControl("txtPlacar2")).Text);
-                        ConexaoBD conexao = new ConexaoBD();
-
-                        // salva no banco as alteraçoes
-                        string strPersisteJogo = "INSERT INTO APOSTAS VALUES(" + codigo_apostador + "," + codigoJogo + "," + txtPlacar1 + "," + txtPlacar2 + "," + "0)";
-
-                        conexao.getComando().CommandText = strPersisteJogo;
-
-                        conexao.Conectar();
-
-                        SqlCommand cmd = new SqlCommand(@strPersisteJogo);
-                        //cmd.ExecuteNonQuery();
-                        conexao.getComando().ExecuteNonQuery();
-                        conexao.Desconectar();
+                        lblMsgErro.Text = "Erro ao salvar as informações :  " + aposta.getErro();
                     }
                     else
                     {
-                        lblMsgErro.Visible = true;
-                        lblMsgErro.Text = "Os dois placares devem ser informados!";
-                        verificaErro = true;
+                        lblMsgErro.Text = "Aposta cadastrada com sucesso !!!";
                     }
 
+                    // exibe a mensagem selecionada
+                    lblMsgErro.Visible = true;
                 }
+
+                // algum resultado de equipe não foi informado. O label com a mensagem correta deve ser apresentada ao usuário.
                 else
                 {
+                    lblMsgErro.Text = "Os dois placares devem ser informados!";
                     lblMsgErro.Visible = true;
-                    lblMsgErro.Text = "Você já realizou aposta para este jogo!";
-                    
-                    verificaErro = true;
                 }
-
             }
             catch (Exception ex)
-            { 
+            {
+                // ocorreu algum erro não tratado pela aplicação. Exibir a mensagem da execeção
+                lblMsgErro.Text = "O seguinte erro ocorreu :  " + ex.ToString();
                 lblMsgErro.Visible = true;
-                lblMsgErro.Text = "Ocorreu algum erro durante a conexão com o banco :  " + ex.ToString();
-                verificaErro = true;
-               
             }
-            finally
-            {
-                if (!verificaErro)
-                {
-                    lblMsgErro.Text = "Dados inseridos com sucesso!";
-                    lblMsgErro.Visible = true;
-                }
-
-            }
-
-
-        }
-        
-        /// <summary>
-        /// Verifica se o apostador ja efetuou aposta para o jogo
-        /// </summary>
-        /// <param name="cod_jogo"></param>
-        /// <param name="cod_apostador"></param>
-        /// <returns></returns>
-        protected bool verificaAposta(int cod_jogo, int cod_apostador)
-        {
-            bool retorno = false;
-
-            ConexaoBD conexao = new ConexaoBD();
-            string strVerificaAposta = "select * from apostas where apostador = " + cod_apostador + " and jogo = " + cod_jogo;
-
-            conexao.getComando().CommandText = strVerificaAposta;
-            conexao.Conectar();
-            SqlCommand cmd = new SqlCommand(@strVerificaAposta);
-            // executa a consulta no banco
-            SqlDataReader dados;
-            dados = conexao.getComando().ExecuteReader();
-
-            if (dados.HasRows)
-            {
-                retorno = true;
-            }
-
-            conexao.Desconectar();
-            return retorno;
         }
     }
 }

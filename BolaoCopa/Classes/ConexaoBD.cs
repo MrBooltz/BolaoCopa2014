@@ -85,13 +85,13 @@ namespace BolaoCopa.Classes
         private String ObterStringConexao()
         {
             // inicializa o retorno do método
-            String retorno = "";
+            String retorno = "Data Source=ATLANTIS;Initial Catalog=bolaoCopa;Integrated Security=True";
 
             // verifica se a chave existe no arquivo
-            if (WebConfigurationManager.AppSettings["StringConexaoBanco"].ToString() != "")
-            {
-                retorno = WebConfigurationManager.AppSettings["StringConexaoBanco"].ToString();
-            }
+            //if (WebConfigurationManager.AppSettings["StringConexaoBanco"].ToString() != "")
+            //{
+            //    retorno = WebConfigurationManager.AppSettings["StringConexaoBanco"].ToString();
+           // }
 
             // retorno do método
             return retorno;

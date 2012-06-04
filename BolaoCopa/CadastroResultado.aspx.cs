@@ -12,128 +12,85 @@ namespace BolaoCopa
     public partial class CadastroResultado : System.Web.UI.Page
     {
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void cbRodada_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // esconde o label de mensagens
             lblMsgErro.Visible = false;
         }
 
-        protected void DropDownList1_TextChanged(object sender, EventArgs e)
+        protected void cbRodada_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        protected void txtMandante_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-
-
-            int codigo_rodada = Int32.Parse(DropDownList1.SelectedValue);
+            // esconde o label de mensagens
             lblMsgErro.Visible = false;
-            bool verificaErro = false;
+        }
+
+        protected void cbGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // esconde o label de mensagens
+            lblMsgErro.Visible = false;
+        }
+
+        protected void grdResultados_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            // limpa o label de mensagem
+            lblMsgErro.Visible = false;
+            
+            // obtém o código da rodada a que se refere o jogo selecionado
+            Int32 iRodada = Int32.Parse(cbRodada.SelectedValue);
+
             try
             {
-                // recupera codigo, placar1 e placar 2
-                string[] arguments = ((string)e.CommandArgument).Split('|');
-                int codigoJogo = Convert.ToInt32(arguments[0]);
-                if (!verificaResultado(codigoJogo))
+                // obtém o vetor de parâmetros da partida
+                string[] parametros = ((string)e.CommandArgument).Split('|');
+                
+                // obtém o código da partida no banco
+                int iJogo = Convert.ToInt32(parametros[0]);
+
+                // obtém a linha do gridview
+                GridViewRow row = grdResultados.Rows[Convert.ToInt32(parametros[1]) - 1];
+
+                // o resultado das duas partidas foi informado com sucesso. Proceder com a gravação das informações
+                if (((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text != "" && ((TextBox)row.Cells[2].FindControl("txtPlacar2")).Text != "")
                 {
-                    int linha = Convert.ToInt32(arguments[1]);
-                    GridViewRow row = GridView1.Rows[linha - 1];
+                    // obtém a quantidade de gols das duas equipes
+                    Int32 golsA = Int32.Parse(((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text);
+                    Int32 golsB = Int32.Parse(((TextBox)row.Cells[4].FindControl("txtPlacar2")).Text);
+                        
+                    // instancia a classe de resultado para persistência das informações no banco
+                    Resultado resultado = new Resultado();
 
-
-                    if (((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text != "" && ((TextBox)row.Cells[2].FindControl("txtPlacar2")).Text != "")
+                    // seta os parâmetros necessários da classe
+                    resultado.setGols_A(golsA);
+                    resultado.setGols_B(golsB);
+                    resultado.setJogo(iJogo);
+                        
+                    // persiste as informações no banco
+                    if (resultado.Salvar() == 0)
                     {
-                        int txtPlacar1 = Int32.Parse(((TextBox)row.Cells[2].FindControl("txtPlacar1")).Text);
-                        int txtPlacar2 = Int32.Parse(((TextBox)row.Cells[4].FindControl("txtPlacar2")).Text);
-                        ConexaoBD conexao = new ConexaoBD();
-
-                        // salva no banco as alteraçoes
-                        string strPersisteJogo = "INSERT INTO RESULTADOS VALUES(" + codigoJogo + "," + txtPlacar1 + "," + txtPlacar2 + ")";
-
-                        conexao.getComando().CommandText = strPersisteJogo;
-
-                        conexao.Conectar();
-
-                        SqlCommand cmd = new SqlCommand(@strPersisteJogo);
-                        //cmd.ExecuteNonQuery();
-                        conexao.getComando().ExecuteNonQuery();
-                        conexao.Desconectar();
+                        lblMsgErro.Text = "Erro ao salvar as informações :  " + resultado.getErro();
                     }
                     else
                     {
-                        lblMsgErro.Visible = true;
-                        lblMsgErro.Text = "Os dois placares devem ser informados!";
-                        verificaErro = true;
+                        lblMsgErro.Text = "Resultado da Partida cadastrado com sucesso !!!";
                     }
 
+                    // exibe a mensagem selecionada
+                    lblMsgErro.Visible = true;
                 }
+
+                // algum resultado de equipe não foi informado. O label com a mensagem correta deve ser apresentada ao usuário.
                 else
                 {
+                    lblMsgErro.Text = "Os dois placares devem ser informados!";
                     lblMsgErro.Visible = true;
-                    lblMsgErro.Text = "Você já realizou cadastro para este jogo!";
-
-                    verificaErro = true;
                 }
-
             }
-            catch
+            catch (Exception ex)
             {
+                // ocorreu algum erro não tratado pela aplicação. Exibir a mensagem da execeção
+                lblMsgErro.Text = "O seguinte erro ocorreu :  " + ex.ToString();
                 lblMsgErro.Visible = true;
-                lblMsgErro.Text = "Ocorreu algum erro durante a conexão com o banco";
-                verificaErro = true;
-
             }
-            finally
-            {
-                if (!verificaErro)
-                {
-                    lblMsgErro.Text = "Dados inseridos com sucesso!";
-                    lblMsgErro.Visible = true;
-                }
-
-            }
-
-            
-           
         }
-
-        protected bool verificaResultado(int cod_jogo)
-        {
-            bool retorno = false;
-
-            ConexaoBD conexao = new ConexaoBD();
-            string strVerificaAposta = "select * from resultados where jogo = " + cod_jogo;
-
-            conexao.getComando().CommandText = strVerificaAposta;
-            conexao.Conectar();
-            SqlCommand cmd = new SqlCommand(@strVerificaAposta);
-            // executa a consulta no banco
-            SqlDataReader dados;
-            dados = conexao.getComando().ExecuteReader();
-
-            if (dados.HasRows)
-            {
-                retorno = true;
-            }
-
-            conexao.Desconectar();
-            return retorno;
-        }
-
-        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblMsgErro.Visible = false;
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Aposta.aspx.cs" Inherits="BolaoCopa.Aposta" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script>
+<script type="text/javascript">
     var agente = navigator.userAgent;
     var plat = navigator.platform;
     var nome = navigator.appName;
@@ -51,31 +51,31 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ctnConteudo" runat="server"> 
 <div class="corpo">
-<h1> CADASTRO DE APOSTA </h1><br />
+<h1> CADASTRO DE APOSTAS </h1><br />
 <div class="resultados">
 <form>
     <asp:Label ID="Label1" runat="server" Text="Rodada: "></asp:Label><br />
-    <asp:DropDownList ID="DropDownList1" runat="server" 
+    <asp:DropDownList ID="cbRodada" runat="server" 
         DataSourceID="SqlDataSource1" DataTextField="DESCRICAO" 
         DataValueField="COD_RODADA" Width="100px" AutoPostBack="True" 
-        onselectedindexchanged="DropDownList1_SelectedIndexChanged" 
-        ontextchanged="DropDownList1_TextChanged">
+        onselectedindexchanged="cbRodada_SelectedIndexChanged" 
+        ontextchanged="cbRodada_TextChanged">
     </asp:DropDownList><br />
     <asp:Label ID="Label2" runat="server" Text="Grupo: "></asp:Label><br />
-    <asp:DropDownList ID="DropDownList2" runat="server" 
+    <asp:DropDownList ID="cbGrupo" runat="server" 
         DataSourceID="SqlDataSource2" DataTextField="DESCRICAO" 
         DataValueField="COD_GRUPO" 
-        onselectedindexchanged="DropDownList2_SelectedIndexChanged" Width="100px" 
+        onselectedindexchanged="cbGrupo_SelectedIndexChanged" Width="100px" 
         AutoPostBack="True">
     </asp:DropDownList><br />
         <div class="tabela_resultados">
         
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                        DataSourceID="SqlDataSource3" Width="622px" AllowSorting="True" 
+                    <asp:GridView ID="grdApostas" runat="server" AutoGenerateColumns="False" 
+                        DataSourceID="SqlDataSource3" Width="873px" AllowSorting="True" 
                         CellPadding="4" ForeColor="#333333" GridLines="None" 
-                        onselectedindexchanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand">
+                        OnRowCommand="grdApostas_RowCommand" HorizontalAlign="Center">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:BoundField DataField="DATAHORA" SortExpression="DATAHORA" />
@@ -144,7 +144,6 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:bolaoCopaConnectionString %>" 
-        onselecting="SqlDataSource1_Selecting" 
         SelectCommand="SELECT * FROM [RODADAS]">
     </asp:SqlDataSource>
 
@@ -165,9 +164,9 @@ WHERE R.COD_RODADA = J.RODADA AND
 )alias
 ">
         <SelectParameters>
-            <asp:ControlParameter ControlID="DropDownList1" DefaultValue="" 
+            <asp:ControlParameter ControlID="cbRodada" DefaultValue="" 
                 Name="codRodada" PropertyName="SelectedValue" />
-            <asp:ControlParameter ControlID="DropDownList2" DefaultValue="" 
+            <asp:ControlParameter ControlID="cbGrupo" DefaultValue="" 
                 Name="codGrupo" PropertyName="SelectedValue" />
         </SelectParameters>
     </asp:SqlDataSource>

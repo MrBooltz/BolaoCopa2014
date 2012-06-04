@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1010]D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll</TopNode>
+  <SelectedNode>[0-1011]BolaoCopa</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1010]D:\Projetos\Dot NET\BolaoCopa\BolaoCopa\bin\BolaoCopa.dll" Expanded="true" />
+    <Node UniqueName="[0-1011]BolaoCopa" Expanded="true" />
+    <Node UniqueName="[0-1012]BolaoCopa.Classes" Expanded="true" />
+    <Node UniqueName="[0-1006]BolaoCopa.Classes.ApostasTest" Expanded="true" />
+    <Node UniqueName="[0-1000]BolaoCopa.Classes.ConexaoDBTest" Expanded="true" />
+    <Node UniqueName="[0-1008]BolaoCopa.Classes.ResultadoTest" Expanded="true" />
+    <Node UniqueName="[0-1004]BolaoCopa.Classes.UsuarioTest" Expanded="true" />
+  </Nodes>
+</VisualState>

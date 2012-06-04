@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="CadastroResultado.aspx.cs" Inherits="BolaoCopa.CadastroResultado" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script>
+<script type="text/javascript">
     var agente = navigator.userAgent;
     var plat = navigator.platform;
     var nome = navigator.appName;
@@ -55,26 +55,27 @@
 <div class="resultados">
 <form>
      <asp:Label ID="Label1" runat="server" Text="Rodada: "></asp:Label><br />
-    <asp:DropDownList ID="DropDownList1" runat="server" 
+    <asp:DropDownList ID="cbRodada" runat="server" 
         DataSourceID="SqlDataSource1" DataTextField="DESCRICAO" 
         DataValueField="COD_RODADA" Width="100px" AutoPostBack="True" 
-        onselectedindexchanged="DropDownList1_SelectedIndexChanged" 
-        ontextchanged="DropDownList1_TextChanged">
+        onselectedindexchanged="cbRodada_SelectedIndexChanged" 
+        ontextchanged="cbRodada_TextChanged">
     </asp:DropDownList><br />
     <asp:Label ID="Label2" runat="server" Text="Grupo: "></asp:Label><br />
-    <asp:DropDownList ID="DropDownList2" runat="server" 
+    <asp:DropDownList ID="cbGrupo" runat="server" 
         DataSourceID="SqlDataSource2" DataTextField="DESCRICAO" 
         DataValueField="COD_GRUPO" 
-        onselectedindexchanged="DropDownList2_SelectedIndexChanged" Width="100px" 
+        onselectedindexchanged="cbGrupo_SelectedIndexChanged" Width="100px" 
         AutoPostBack="True">
     </asp:DropDownList><br />
         <div class="tabela_resultados">
         
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                        DataSourceID="SqlDataSource3" Width="622px" AllowSorting="True" 
-                        CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="GridView1_RowCommand">
+                    <asp:GridView ID="grdResultados" runat="server" AutoGenerateColumns="False" 
+                        DataSourceID="SqlDataSource3" Width="873px" AllowSorting="True" 
+                        CellPadding="4" ForeColor="#333333" GridLines="None" 
+                        OnRowCommand="grdResultados_RowCommand" HorizontalAlign="Center">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:BoundField DataField="DATAHORA" SortExpression="DATAHORA" />
@@ -131,7 +132,7 @@
                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
                     <br />
-                    <asp:Label ID="lblMsgErro" runat="server" Text="" Visible=false></asp:Label>
+                    <asp:Label ID="lblMsgErro" runat="server" Text="" Visible="false"></asp:Label>
                 </ContentTemplate>
             </asp:UpdatePanel>
 
@@ -153,7 +154,7 @@
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
         ConnectionString="<%$ ConnectionStrings:bolaoCopaConnectionString %>" SelectCommand="SELECT ROW_NUMBER() OVER (ORDER BY alias.cod_jogo DESC) AS Linhas, * FROM
 (
-SELECT J.COD_JOGO, J.DATAHORA, S1.NOME as NOME, S1.BANDEIRA as BANDEIRA, S2.NOME as NOME1, S2.BANDEIRA as BANDEIRA1 FROM JOGOS J, SELECOES S1, SELECOES S2, RODADAS R, GRUPOS G
+SELECT J.COD_JOGO, J.DATAHORA, S1.NOME as NOME, S1.BANDEIRA as BANDEIRA, J.TIME_A as GOLS_A, J.TIME_B as GOLS_B,S2.NOME as NOME1, S2.BANDEIRA as BANDEIRA1 FROM JOGOS J, SELECOES S1, SELECOES S2, RODADAS R, GRUPOS G
 WHERE R.COD_RODADA = J.RODADA AND
 	  J.TIME_A = S1.COD_SELECAO AND
 	  J.TIME_B = S2.COD_SELECAO AND
@@ -163,9 +164,9 @@ WHERE R.COD_RODADA = J.RODADA AND
 )alias
 ">
         <SelectParameters>
-            <asp:ControlParameter ControlID="DropDownList1" DefaultValue="" 
+            <asp:ControlParameter ControlID="cbRodada" DefaultValue="" 
                 Name="codRodada" PropertyName="SelectedValue" />
-            <asp:ControlParameter ControlID="DropDownList2" DefaultValue="" 
+            <asp:ControlParameter ControlID="cbGrupo" DefaultValue="" 
                 Name="codGrupo" PropertyName="SelectedValue" />
         </SelectParameters>
     </asp:SqlDataSource>

@@ -22,13 +22,13 @@ namespace BolaoCopa {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// cbRodada control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList cbRodada;
         
         /// <summary>
         /// Label2 control.
@@ -40,13 +40,13 @@ namespace BolaoCopa {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// cbGrupo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList cbGrupo;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -58,13 +58,13 @@ namespace BolaoCopa {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// GridView1 control.
+        /// grdResultados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grdResultados;
         
         /// <summary>
         /// ScriptManager1 control.
